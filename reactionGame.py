@@ -10,7 +10,7 @@ score = 0
 misses = 0
 
 def next_number():
-	return random.randint(0,7)
+	return random.randint(0,3)
 
 def next_button():
 	global current
