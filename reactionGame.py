@@ -48,7 +48,7 @@ while True:
 				score += 1
 				print ("Your score {}".format(score))
 			else:
-				print "Wrong one!"
+				print ("Wrong one!")
 				score -= 1
 				print ("Your score {}".format(score))
 	elif time_left==0:
