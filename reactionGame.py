@@ -1,3 +1,4 @@
+from __future__ import print_function
 from time import sleep
 import random
 import pifacedigitalio as piface
@@ -27,7 +28,7 @@ def next_button():
 	if ((score + misses) %10) ==0:
 		if set_time > 125:
 			set_time -=50
-			print "Time left is: %s" %set_time
+			print ("Time left is: {}}".format(set_time))
 	time_left = set_time
 	pfd.output_port.value = current
 
@@ -42,22 +43,22 @@ while True:
 		if in_bit_pattern > 0:
             
 			if in_bit_pattern == current:
-				print “Correct!”
+				print ("Correct!")
 				next_button()
 				score += 1
-				print “Your score %d” %score
+				print ("Your score {}".format(score))
 			else:
 				print "Wrong one!"
 				score -= 1
-				print "Your score %d" %score
+				print ("Your score {}".format(score))
 	elif time_left==0:
 		misses +=1
-		print "Missed one!"
+		print ("Missed one!")
 		next_button()
         
 		if misses == 10:
 			break
 	time_left -=1
 pfd.output_port.value = 0
-print "\nGame over!\n"
-print "Your score was: %s" %score
+print ("\nGame over!\n")
+print ("Your score was: {}".format(score))
