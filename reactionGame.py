@@ -28,7 +28,7 @@ def next_button():
 	if ((score + misses) %10) ==0:
 		if set_time > 125:
 			set_time -=50
-			print ("Time left is: {}}".format(set_time))
+			print ("Time left is: {}".format(set_time))
 	time_left = set_time
 	pfd.output_port.value = current
 
